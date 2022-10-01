@@ -1,0 +1,21 @@
+{
+    "projectId": "63389e99652cbb0c659e",
+    "projectName": "call-for-code-2022",
+    "functions": [
+        {
+            "$id": "6338a6f2ac57ee706977",
+            "name": "Facebook Marketplace Search",
+            "runtime": "node-16.0",
+            "path": "functions/Facebook Marketplace Search",
+            "entrypoint": "src/index.js",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        }
+    ]
+}
