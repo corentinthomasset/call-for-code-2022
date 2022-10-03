@@ -12,11 +12,11 @@
     "axios": "^0.27.2",
     "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.8.3",
-    "node-fetch": "^2.6.7",
     "validate.js": "^0.13.1",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "vuex": "^4.0.0",
+    "appwrite": "git+https://github.com/corentinthomasset/appwrite-sdk-for-web"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.179",
