@@ -1,9 +1,19 @@
 import { Product, Result } from '@/types';
-import searchFBMarketplace from './marketplaces/facebookMarketplace';
+import api from '../api';
 
 export default async function searchMarketplaces(product: Product): Promise<Result[]> {
-  console.log(product);
-  const res = await searchFBMarketplace('montreal', `${product.name} ${product.description} ${product.brand}`);
-  console.log(res);
-  return res;
+  return new Promise((resolve, reject) => {
+    api.provider().functions.createExecution('6338a6f2ac57ee706977', JSON.stringify({
+      query: `${product.name}, ${product.description}, ${product.brand}`,
+      location: 'montreal',
+    })).then(({ response }) => {
+      let res: Result[] = [];
+      if (response) {
+        res = JSON.parse(response);
+      }
+      resolve(res);
+    }).catch((err) => {
+      reject(err);
+    });
+  });
 }

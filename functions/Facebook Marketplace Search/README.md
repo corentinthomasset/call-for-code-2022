@@ -6,7 +6,7 @@ _Example input:_
 
 ```json
 {
- "query": "KIVIK Canapé, Tibbleby beige/gris ikea",
+  "query": "KIVIK Canapé, Tibbleby beige/gris ikea",
   "location": "montreal"
 }
 ```

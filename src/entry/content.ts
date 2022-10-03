@@ -12,5 +12,8 @@ if (host.includes('ikea.com')) {
 if (product) {
   chrome.runtime.sendMessage(product, (response) => {
     console.log(response);
+    if (response.data) {
+      console.log('ok');
+    }
   });
 }
