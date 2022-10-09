@@ -3,6 +3,10 @@
     "name": "call-for-code-2022",
     "description": "chrome extension",
     "version": "0.0.1",
+    "permissions": [
+        "scripting"
+    ],
+    "host_permissions": ["<all_urls>"],
     "background": {
         "service_worker": "/background.js"
     },
