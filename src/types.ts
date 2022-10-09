@@ -1,11 +1,9 @@
 export interface Product {
-  url: string,
   name: string,
-  brand: string,
-  description: string,
   price: string,
   keywords: string[],
-  images: string[]
+  coverImage: URL,
+  url: URL,
 }
 
 export interface Result {
@@ -13,5 +11,5 @@ export interface Result {
   price: string,
   location: string,
   coverImage: URL,
-  link: URL,
+  url: URL,
 }

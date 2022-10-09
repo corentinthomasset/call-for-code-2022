@@ -5,13 +5,11 @@ export default function parseProduct(pageUrl: Location) {
   const urlMatches = pageUrl.pathname.match(urlRe);
   if (urlMatches && urlMatches.length) {
     const product: Product = {
-      url: pageUrl.href,
+      url: new URL(pageUrl.href),
       name: '',
-      brand: 'ikea',
-      description: '',
       price: '',
       keywords: [],
-      images: [],
+      coverImage: new URL('https://www.ikea.com/global/en/images/ikea-logo.svg'),
     };
     // Extract product name
     const elHeaderTitle: Element | null = document.querySelector('h1.pip-header-section .pip-header-section__title--big');
@@ -20,7 +18,8 @@ export default function parseProduct(pageUrl: Location) {
     } else {
       throw new Error('Unable to extract product name');
     }
-    // Extract product description
+    // Extract product keywords
+    product.keywords.push('ikea');
     const elHeaderDescription: Element | null = document.querySelector('h1.pip-header-section .pip-header-section__description');
     if (elHeaderDescription) {
       const hiddenElements: NodeListOf<Element> = elHeaderDescription.querySelectorAll('*[hidden]');
@@ -29,7 +28,7 @@ export default function parseProduct(pageUrl: Location) {
       });
     }
     if (elHeaderDescription && elHeaderDescription.textContent) {
-      product.description = elHeaderDescription.textContent;
+      product.keywords = elHeaderDescription.textContent.split(', ');
     } else {
       throw new Error('Unable to extract product description');
     }
@@ -47,14 +46,12 @@ export default function parseProduct(pageUrl: Location) {
     } else {
       throw new Error('Unable to extract product price');
     }
-    // Extract product images
+    // Extract coverImage
     const elGridImgs: NodeListOf<Element> = document.querySelectorAll('.pip-media-grid__grid img');
-    elGridImgs.forEach((el) => {
-      const src: string | null = el.getAttribute('src');
-      if (src) {
-        product.images.push(src);
-      }
-    });
+    const src: string | null = elGridImgs[0].getAttribute('src');
+    if (src) {
+      product.coverImage = new URL(src);
+    }
     return product;
   }
   return null;
