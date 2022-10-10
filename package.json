@@ -9,11 +9,11 @@
     "build-watch": "vue-cli-service  --env.NODE_ENV=development build-watch --mode development"
   },
   "dependencies": {
-    "@types/uuid": "^8.3.4",
     "appwrite": "git+https://github.com/corentinthomasset/appwrite-sdk-for-web",
     "axios": "^0.27.2",
     "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.8.3",
+    "lodash": "^4.17.21",
     "uuid": "^9.0.0",
     "validate.js": "^0.13.1",
     "vue": "^3.2.13",
@@ -22,6 +22,8 @@
   },
   "devDependencies": {
     "@types/chrome": "^0.0.179",
+    "@types/lodash": "^4.14.186",
+    "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",

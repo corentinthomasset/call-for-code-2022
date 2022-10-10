@@ -13,3 +13,10 @@ export interface Result {
   coverImage: URL,
   url: URL,
 }
+
+export interface Search {
+  timestamp: number,
+  product: Product,
+  results: Result[],
+  tabId: number | null,
+}

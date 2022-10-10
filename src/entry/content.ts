@@ -10,7 +10,12 @@ if (host.includes('ikea.com')) {
 }
 
 if (product) {
-  chrome.runtime.sendMessage(product, (results) => {
-    console.log(results);
+  console.log(`Searching for pre-loved "${product.name}, ${product.keywords.join(', ')}" near you!`);
+  chrome.runtime.sendMessage({ type: 'search', payload: product }, (resultsCount) => {
+    if (resultsCount) {
+      console.log(`${resultsCount} offers found.`);
+    } else {
+      console.log('No results.');
+    }
   });
 }

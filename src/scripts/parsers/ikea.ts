@@ -48,7 +48,7 @@ export default function parseProduct(pageUrl: Location) {
     }
     // Extract coverImage
     const elGridImgs: NodeListOf<Element> = document.querySelectorAll('.pip-media-grid__grid img');
-    const src: string | null = elGridImgs[0].getAttribute('src');
+    const src: string | null = elGridImgs[1].getAttribute('src');
     if (src) {
       product.coverImage = new URL(src);
     }

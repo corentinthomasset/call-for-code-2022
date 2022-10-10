@@ -4,7 +4,9 @@
     "description": "chrome extension",
     "version": "0.0.1",
     "permissions": [
-        "scripting"
+        "scripting",
+        "storage",
+        "tabs"
     ],
     "host_permissions": ["<all_urls>"],
     "background": {
