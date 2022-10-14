@@ -12,6 +12,7 @@ export interface Result {
   location: string,
   coverImage: URL,
   url: URL,
+  rating: undefined | number
 }
 
 export interface Search {
