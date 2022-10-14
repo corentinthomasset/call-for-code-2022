@@ -4,7 +4,7 @@ import api from '../api';
 
 export default async function searchMarketplaces(product: Product): Promise<Result[]> {
   return new Promise((resolve, reject) => {
-    const query = `${product.name}, ${product.keywords.join(', ')}`;
+    const query = `${product.name} ${product.keywords.join(' ')}`;
     api.provider().functions.createExecution('6338a6f2ac57ee706977', JSON.stringify({
       query,
       location: 'montreal',
