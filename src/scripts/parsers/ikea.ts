@@ -19,7 +19,6 @@ export default function parseProduct(pageUrl: Location) {
       throw new Error('Unable to extract product name');
     }
     // Extract product keywords
-    product.keywords.push('ikea');
     const elHeaderDescription: Element | null = document.querySelector('h1.pip-header-section .pip-header-section__description');
     if (elHeaderDescription) {
       const hiddenElements: NodeListOf<Element> = elHeaderDescription.querySelectorAll('*[hidden]');
@@ -32,6 +31,7 @@ export default function parseProduct(pageUrl: Location) {
     } else {
       throw new Error('Unable to extract product description');
     }
+    product.keywords.push('ikea');
     // Extract price
     const elPrice: Element | null = document.querySelector('.pip-temp-price__sr-text');
     if (elPrice && elPrice.textContent) {
