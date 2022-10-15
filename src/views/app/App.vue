@@ -12,17 +12,17 @@ export default {
   },
   mounted() {
     chrome.runtime.sendMessage({ type: 'getTabId' }, (tabId) => {
-      console.log(tabId);
       this.setTabId(tabId);
-    });
-
-    chrome.storage.local.get(['history'], ({ history }) => {
-      this.setHistory(history);
-    });
-    chrome.storage.onChanged.addListener((changes, area) => {
-      if (area === 'local' && changes.history?.newValue) {
-        this.setHistory(changes.history?.newValue);
-      }
+      chrome.storage.local.get(['history'], ({ history }) => {
+        this.setHistory(history);
+      });
+      /*
+      chrome.storage.onChanged.addListener((changes, area) => {
+        if (area === 'local' && changes.history?.newValue) {
+          this.setHistory(changes.history?.newValue);
+        }
+      });
+      */
     });
   },
 };
