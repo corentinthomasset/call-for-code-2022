@@ -5,6 +5,7 @@ import Results from '@/views/app/Results.vue';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '',
+    alias: '/notification',
     name: 'notification',
     component: Notification,
   },
