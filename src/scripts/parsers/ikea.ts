@@ -27,9 +27,11 @@ export default function parseProduct(pageUrl: Location) {
       });
     }
     if (elHeaderDescription && elHeaderDescription.textContent) {
-      product.keywords = elHeaderDescription.textContent.split(', ');
-    } else {
-      throw new Error('Unable to extract product description');
+      product.keywords.push(elHeaderDescription.textContent.split(', ')[0]);
+    }
+    const elHeaderMeasurements: Element | null = document.querySelector('h1.pip-header-section .pip-header-section__description-measurement');
+    if (elHeaderMeasurements && elHeaderMeasurements.textContent) {
+      product.keywords.push(elHeaderMeasurements.textContent);
     }
     product.keywords.push('ikea');
     // Extract price
