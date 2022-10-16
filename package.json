@@ -20,6 +20,7 @@
     "validate.js": "^0.13.1",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
+    "vue-unicons": "^3.3.1",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
