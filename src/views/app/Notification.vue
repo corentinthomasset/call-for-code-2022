@@ -2,11 +2,14 @@
     <div
       @click="clickHandler"
       @keyup.alt.enter="clickHandler"
-      class="fixed top-16 left-0 font-sans w-screen flex justify-center items-center
-      pointer-events-none z-max">
-      <div class="bg-gradient-to-r from-green-500 to-green-600 px-7 py-4 text-white
-      shadow-xl cursor-pointer pointer-events-auto rounded-full animate-slide-in">
-        Save up to <em class="underline not-italic">${{ maxSavings }}</em> on {{ productName }}.
+      class="tw-fixed tw-top-16 tw-left-0 tw-font-sans tw-w-screen tw-flex tw-justify-center
+      tw-items-center tw-pointer-events-none tw-z-max">
+      <div class="tw-bg-gradient-to-r tw-from-green-500 tw-to-green-600 tw-px-7 tw-py-4
+      tw-text-white tw-shadow-xl tw-cursor-pointer tw-pointer-events-auto tw-rounded-full
+      tw-animate-slide-in">
+        Save up to
+        <em class="tw-underline tw-not-italic">${{ maxSavings }}</em>
+        on {{ productName }}.
         Check offers near you!
       </div>
     </div>
