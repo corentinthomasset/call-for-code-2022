@@ -65,7 +65,7 @@ module.exports = async function search(req, res) {
               price: listing.listing_price.amount,
               location: `${listing.location.reverse_geocode.city}, ${listing.location.reverse_geocode.state}`,
               coverImage: new URL(listing.primary_listing_photo.image.uri),
-              url: new URL(`https://www.facebook.com/marketplace/item/${e.node.story_key}/`),
+              link: new URL(`https://www.facebook.com/marketplace/item/${e.node.story_key}/`),
             });
           }
         });

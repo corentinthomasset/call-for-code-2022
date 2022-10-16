@@ -11,7 +11,7 @@ export interface Result {
   price: string,
   location: string,
   coverImage: URL,
-  url: URL,
+  link: URL,
   rating: undefined | number
 }
 
