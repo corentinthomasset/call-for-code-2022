@@ -30,7 +30,10 @@ export default function parseProduct(pageUrl: Location) {
       product.keywords.push(elHeaderDescription.textContent.split(', ')[0]);
     }
     const elHeaderMeasurements: Element | null = document.querySelector('h1.pip-header-section .pip-header-section__description-measurement');
-    if (elHeaderMeasurements && elHeaderMeasurements.textContent) {
+    const measurementsRe = /^\w{3,}$/;
+    if (elHeaderMeasurements
+      && elHeaderMeasurements.textContent
+      && elHeaderMeasurements.textContent.match(measurementsRe)) {
       product.keywords.push(elHeaderMeasurements.textContent);
     }
     product.keywords.push('ikea');
