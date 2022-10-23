@@ -8,6 +8,7 @@ import {
   uniArrowDown,
   uniLinkBroken,
   uniLocationPoint,
+  uniInfoCircle,
 } from 'vue-unicons/dist/icons';
 
 Unicon.add([
@@ -17,4 +18,5 @@ Unicon.add([
   uniArrowDown,
   uniLinkBroken,
   uniLocationPoint,
+  uniInfoCircle,
 ]);

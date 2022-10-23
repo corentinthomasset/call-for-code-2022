@@ -1,16 +1,20 @@
 <template>
     <div
+      v-if="showNotification"
       @click="clickHandler"
       @keyup.alt.enter="clickHandler"
       class="tw-fixed tw-top-16 tw-left-0 tw-font-sans tw-w-screen tw-flex tw-justify-center
       tw-items-center tw-pointer-events-none tw-z-max">
-      <div class="tw-bg-gradient-to-r tw-from-green-500 tw-to-green-600 tw-px-7 tw-py-4
-      tw-text-white tw-shadow-xl tw-cursor-pointer tw-pointer-events-auto tw-rounded-full
-      tw-animate-slide-in">
+      <div class="tw-bg-green-500 tw-px-4 tw-py-2 tw-text-white tw-shadow-xl tw-cursor-pointer
+      tw-text-white tw-pointer-events-auto tw-rounded-full
+      tw-animate-slide-in tw-flex tw-items-center tw-justify-between">
         Save up to
         <em class="tw-underline tw-not-italic">${{ maxSavings }}</em>
         on {{ productName }}.
         Check offers near you!
+        <button class="tw-flex tw-items-center tw-pl-4" @click.stop="showNotification=false">
+          <unicon name="times" class="tw-fill-green-700"/>
+        </button>
       </div>
     </div>
 </template>
@@ -20,6 +24,11 @@ import { mapState } from 'vuex';
 
 export default {
   name: 'notificationView',
+  data() {
+    return {
+      showNotification: true,
+    };
+  },
   computed: {
     ...mapState(['history', 'tabId', 'matches']),
     search() {
