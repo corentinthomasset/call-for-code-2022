@@ -12,7 +12,26 @@
                 "node_modules",
                 ".npm"
             ],
-            "execute": [],
+            "execute": [
+                "any"
+            ],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        },
+        {
+            "$id": "6354a0e6f27888512206",
+            "name": "Kijiji Search",
+            "runtime": "node-16.0",
+            "path": "functions/Kijiji Search",
+            "entrypoint": "src/index.js",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "execute": [
+                "any"
+            ],
             "events": [],
             "schedule": "",
             "timeout": 15

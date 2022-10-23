@@ -10,7 +10,7 @@
 
   If an error is thrown, a response with code 500 will be returned.
 */
-const kijiji = require("kijiji-scraper");
+const kijiji = require('kijiji-scraper');
 const validate = require('validate.js');
 
 module.exports = async function search(req, res) {
@@ -39,26 +39,24 @@ module.exports = async function search(req, res) {
   const params = {
     q: args.query,
     locationId: kijiji.locations.QUEBEC.GREATER_MONTREAL,
-    adType: "OFFERED"
+    adType: 'OFFERED',
   };
   const locationRegex = /([\p{L}\d\-!\s]{3,},\s?[A-Z]{2,})/gu;
   const results = [];
 
-  kijiji.search(params).then(ads => {
+  kijiji.search(params).then((ads) => {
     ads.forEach((ad) => {
-      if(typeof ad.attributes.price !== 'undefined'){
+      const location = ad.attributes.location.match(locationRegex);
+      if (ad.title && ad.attributes.price && location && ad.image && ad.url) {
         results.push({
           title: ad.title,
           price: ad.attributes.price.toString(),
-          location: ad.attributes.location.match(locationRegex).toString().trim(),
+          location: location.toString().trim(),
           coverImage: new URL(ad.image),
-          link: new URL(ad.url)
+          link: new URL(ad.url),
         });
       }
-
     });
     res.json(results);
-  }).catch((err) => {
-    throw new Error(`Unable to fetch results from Kijiji. Request failed with error: ${err}`);
   });
 };

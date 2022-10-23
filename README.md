@@ -7,7 +7,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run build-watch
 ```
 
 ### Compiles and minifies for production
@@ -18,6 +18,12 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+### .env
+```
+VUE_APP_APPWRITE_ENDPOINT=http://163.74.93.42/v1
+VUE_APP_APPWRITE_PROJECT=63389e99652cbb0c659e
 ```
 
 ### Customize configuration
