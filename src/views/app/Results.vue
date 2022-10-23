@@ -58,7 +58,7 @@
         </div>
       </div>
       <div class="tw-flex tw-justify-center" v-if="expandedView">
-        <router-link to="" class="tw-flex tw-justify-between tw-items-center tw-bg-green-200 tw-px-4
+        <router-link to="" class="tw-flex tw-justify-between tw-items-center tw-bg-green-100 tw-px-4
          tw-py-3 tw-cursor-pointer tw-rounded-full
          hover:tw-no-underline">
           <svg width="16px" height="18px" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg"
