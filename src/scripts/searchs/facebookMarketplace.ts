@@ -41,10 +41,24 @@ export default async function search(query: string, location: string):Promise<st
         'viewport-width': '2560',
       },
     }).then((response) => response.text()).then((data) => {
-      const re = /"marketplace_search":(\{.*}),"marketplace_seo_page"/;
-      const matches = data.match(re);
-      if (matches) {
-        const edges = JSON.parse(matches[1])?.feed_units?.edges;
+      const re = /(marketplace_search.*)<\/script>/;
+      const dataMatch = data.match(re);
+      if (dataMatch) {
+        const rawData = dataMatch[1];
+        const extractedData = [];
+        let index = rawData.indexOf('marketplace_search') + 20;
+        let bracketsCount = 0;
+        do {
+          if (rawData[index] === '{') {
+            bracketsCount += 1;
+          }
+          if (rawData[index] === '}') {
+            bracketsCount -= 1;
+          }
+          extractedData.push(rawData[index]);
+          index += 1;
+        } while (bracketsCount > 0);
+        const edges = JSON.parse(extractedData.join(''))?.feed_units?.edges;
         if (edges) {
           edges.forEach((e:any) => {
             if (e.node?.listing) {
