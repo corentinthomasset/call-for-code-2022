@@ -22,7 +22,7 @@ export default function parseProduct(pageUrl: Location, callback: (product: Prod
     // Extract product keywords
     const elHeaderDescription: Element | null = document.querySelector('ol[itemtype="https://schema.org/BreadcrumbList"] li:nth-last-child(2)');
     if (elHeaderDescription && elHeaderDescription.textContent) {
-      product.keywords = elHeaderDescription.textContent.split(' ');
+      product.keywords = elHeaderDescription.textContent.replace('& ', '').split(' ').slice(-2);
     }
     product.keywords.push('structube');
     // Extract price
