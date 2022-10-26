@@ -68,7 +68,9 @@ const historyStateUpdateHandler = _.debounce((details) => {
 }, 1000);
 
 chrome.webNavigation.onHistoryStateUpdated.addListener((details) => {
-  historyStateUpdateHandler(details);
+  if (!details.url.includes('chrome://')) {
+    historyStateUpdateHandler(details);
+  }
 });
 
 chrome.storage.local.clear();
