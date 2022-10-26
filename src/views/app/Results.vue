@@ -48,6 +48,15 @@
                 :cover-image="result.coverImage"
                 :link="result.link"
               />
+              <ResultCard
+                v-for="result in suggestions"
+                :key="result.url"
+                :title="result.title"
+                :price="result.price"
+                :location="result.location"
+                :cover-image="result.coverImage"
+                :link="result.link"
+              />
             </template>
           </div>
           <button @click="expandView" v-if="!expandedView" class="tw-flex tw-justify-evenly
