@@ -9,7 +9,7 @@ export default function parseProduct(pageUrl: Location, callback: (product: Prod
       name: '',
       price: '',
       keywords: [],
-      coverImage: new URL('https://www.ikea.com/global/en/images/ikea-logo.svg'),
+      coverImage: new URL('https://www.ikea.com/favicon.ico'),
     };
     // Extract product name
     const elHeaderTitle: Element | null = document.querySelector('h1.pip-header-section .pip-header-section__title--big');
