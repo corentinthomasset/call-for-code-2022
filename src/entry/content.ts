@@ -1,5 +1,6 @@
 import { Product } from '@/types';
 import parseIkeaProduct from '../scripts/parsers/ikea';
+import parseStructubeProduct from '../scripts/parsers/structube';
 import MessageSender = chrome.runtime.MessageSender;
 
 function productCallback(product: Product):void {
@@ -18,6 +19,9 @@ function parsePage():void {
   const host: string = pageUrl.hostname;
   if (host.includes('ikea.com')) {
     parseIkeaProduct(pageUrl, productCallback);
+  }
+  if (host.includes('structube.com')) {
+    parseStructubeProduct(pageUrl, productCallback);
   }
 }
 
