@@ -26,7 +26,7 @@ export default function parseProduct(pageUrl: Location, callback: (product: Prod
     }
     product.keywords.push('structube');
     // Extract price
-    const elPrice: Element | null = document.querySelector('div.productFullDetail-module-regularPrice-2i_');
+    const elPrice: Element | null = document.querySelector('div[class*="productFullDetail-module-regularPrice"]');
     if (elPrice && elPrice.textContent) {
       const priceRe = /([\d,.]+)/;
       const priceMatches = elPrice.textContent.match(priceRe);
@@ -40,7 +40,7 @@ export default function parseProduct(pageUrl: Location, callback: (product: Prod
       throw new Error('Unable to extract product price');
     }
     // Extract coverImage
-    const elGridImgs: NodeListOf<Element> = document.querySelectorAll('div.zoomResourceImage-module-root-4jR img');
+    const elGridImgs: NodeListOf<Element> = document.querySelectorAll('div[class*="zoomResourceImage-module-root"] img');
     const src: string | null = elGridImgs[0].getAttribute('src');
     if (src) {
       product.coverImage = new URL(src);
