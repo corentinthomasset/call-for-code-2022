@@ -45,7 +45,7 @@ function searchHandler(
       }
     });
   }).catch((err) => {
-    console.error(`Error while searching marketplaces: ${err}.\nNo results were returned.`);
+    console.warn(`Error while searching marketplaces: ${err}.\nNo results were returned.`);
     sendResponse(0);
   });
   return true;
@@ -62,5 +62,13 @@ chrome.runtime.onMessage.addListener(
     return false;
   },
 );
+
+const historyStateUpdateHandler = _.debounce((details) => {
+  chrome.tabs.sendMessage(details.tabId, { type: 'historyStateUpdated' });
+}, 1000);
+
+chrome.webNavigation.onHistoryStateUpdated.addListener((details) => {
+  historyStateUpdateHandler(details);
+});
 
 chrome.storage.local.clear();

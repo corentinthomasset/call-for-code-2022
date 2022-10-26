@@ -1,15 +1,8 @@
 import { Product } from '@/types';
 import parseIkeaProduct from '../scripts/parsers/ikea';
+import MessageSender = chrome.runtime.MessageSender;
 
-const pageUrl: Location = document.location;
-const host: string = pageUrl.hostname;
-
-let product: Product | null = null;
-if (host.includes('ikea.com')) {
-  product = parseIkeaProduct(pageUrl);
-}
-
-if (product) {
+function productCallback(product: Product):void {
   console.log(`Searching for pre-loved "${product.name}, ${product.keywords.join(', ')}" near you!`);
   chrome.runtime.sendMessage({ type: 'search', payload: product }, (resultsCount) => {
     if (resultsCount) {
@@ -19,3 +12,26 @@ if (product) {
     }
   });
 }
+
+function parsePage():void {
+  const pageUrl: Location = document.location;
+  const host: string = pageUrl.hostname;
+  if (host.includes('ikea.com')) {
+    parseIkeaProduct(pageUrl, productCallback);
+  }
+}
+
+// Parse the page when the script is loaded.
+parsePage();
+
+// Parse the page when history state is updated (Support for SPA)
+chrome.runtime.onMessage.addListener(
+  (message, sender:MessageSender, sendResponse:(payload:any) => void) => {
+    if (message.type === 'historyStateUpdated') {
+      console.log('history updated');
+      parsePage();
+      sendResponse(true);
+    }
+    return false;
+  },
+);

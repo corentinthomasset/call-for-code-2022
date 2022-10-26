@@ -1,6 +1,6 @@
 import { Product } from '@/types';
 
-export default function parseProduct(pageUrl: Location) {
+export default function parseProduct(pageUrl: Location, callback: (product: Product) => void) {
   const urlRe = /\/p\/(.*)\//;
   const urlMatches = pageUrl.pathname.match(urlRe);
   if (urlMatches && urlMatches.length) {
@@ -57,7 +57,6 @@ export default function parseProduct(pageUrl: Location) {
     if (src) {
       product.coverImage = new URL(src);
     }
-    return product;
+    callback(product);
   }
-  return null;
 }

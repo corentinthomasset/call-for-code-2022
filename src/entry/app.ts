@@ -17,3 +17,14 @@ app.use(store);
 app.use(router);
 app.use(Unicon);
 app.mount(`#lof-${id}`);
+
+chrome.runtime.onMessage.addListener(
+  (message, sender:MessageSender, sendResponse:(payload:any) => void) => {
+    if (message.type === 'historyStateUpdated') {
+      app.unmount();
+      document.querySelector(`#lof-${id}`).remove();
+      sendResponse(true);
+    }
+    return false;
+  },
+);
