@@ -1,7 +1,11 @@
 <template>
 <a :href="link" target="_blank" class="tw-group tw-w-56 hover:tw-no-underline">
   <div class="tw-bg-cover tw-bg-center tw-rounded-lg tw-w-56 tw-h-60 tw-shadow-lg tw-transition-all
-  group-hover:-tw-translate-y-1" :style="coverStyle"></div>
+  group-hover:-tw-translate-y-1" :style="coverStyle">
+    <span v-if="marketplaceName">
+      {{marketplaceName}}
+    </span>
+  </div>
   <div class="tw-flex tw-justify-between tw-mt-4">
     <div class="tw-flex-auto tw-w-3/5 tw-mr-2">
       <h1 class="tw-text-base tw-font-semibold tw-truncate group-hover:tw-underline">
@@ -29,6 +33,13 @@ export default {
   computed: {
     coverStyle() {
       return `background: url(${this.coverImage})`;
+    },
+    marketplaceName() {
+      const matches = new URL(this.link).hostname.match(/^(\w*\.)*(\w+)\.\w{2,}$/);
+      if (matches && matches.length >= 3) {
+        return matches[2];
+      }
+      return null;
     },
   },
 };
