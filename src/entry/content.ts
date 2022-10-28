@@ -4,7 +4,7 @@ import parseStructubeProduct from '../scripts/parsers/structube';
 import MessageSender = chrome.runtime.MessageSender;
 
 function productCallback(product: Product):void {
-  console.log(`Searching for pre-loved "${product.name}, ${product.keywords.join(' ')}" near you!`);
+  console.log(`Searching for pre-loved "${product.name} ${product.keywords.join(' ')}" near you!`);
   chrome.runtime.sendMessage({ type: 'search', payload: product }, (resultsCount) => {
     if (resultsCount) {
       console.log(`${resultsCount} offers found.`);
@@ -31,11 +31,9 @@ parsePage();
 // Parse the page when history state is updated (Support for SPA)
 chrome.runtime.onMessage.addListener(
   (message, sender:MessageSender, sendResponse:(payload:any) => void) => {
-    if (message.type === 'historyStateUpdated') {
-      console.log('history updated');
+    if (message?.type === 'historyStateUpdated') {
       parsePage();
-      sendResponse(true);
     }
-    return false;
+    sendResponse(true);
   },
 );

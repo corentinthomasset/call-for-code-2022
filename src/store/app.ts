@@ -9,6 +9,7 @@ export default createStore({
     suggestions: [],
     history: [],
     tabId: null,
+    userScore: 1,
   },
   getters: {
   },
@@ -35,6 +36,17 @@ export default createStore({
     },
     setTabId(state, tabId) {
       state.tabId = tabId;
+    },
+    setUserScore(state, score) {
+      state.userScore = score;
+      chrome.storage.local.set({ userScore: score }).catch((err) => { console.error(err); });
+    },
+    incrementUserScore(state) {
+      state.userScore += 1;
+      chrome.storage.local.set({ userScore: state.userScore }).catch((err) => {
+        console.error(err);
+      });
+      chrome.runtime.sendMessage({ type: 'incrementScore' });
     },
   },
   actions: {

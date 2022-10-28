@@ -9,8 +9,7 @@
       tw-text-white tw-pointer-events-auto tw-rounded-full
       tw-animate-slide-in tw-flex tw-items-center tw-justify-between tw-text-base">
         <span>
-           Save
-          <!-- up to <em class="tw-underline tw-not-italic"> ${{ maxSavings }} </em> -->
+           Save <!-- up to <em class="tw-underline tw-not-italic"> ${{ maxSavings }} </em> -->
           on {{ productName }}.
           Check offers near by!
         </span>

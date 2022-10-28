@@ -1,5 +1,6 @@
 <template>
-<a :href="link" target="_blank" class="tw-group tw-w-56 hover:tw-no-underline">
+<a :href="link" target="_blank" class="tw-group tw-w-56 hover:tw-no-underline"
+   @click="incrementUserScore">
   <div class="tw-bg-cover tw-bg-center tw-rounded-lg tw-w-56 tw-h-60 tw-shadow-lg tw-transition-all
   group-hover:-tw-translate-y-1 tw-relative" :style="coverStyle">
     <span v-if="marketplaceName" class="tw-absolute tw-right-2 tw-bottom-2 tw-bg-slate-900/30
@@ -22,6 +23,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
   name: 'ResultCard',
   props: {
@@ -42,6 +45,9 @@ export default {
       }
       return null;
     },
+  },
+  methods: {
+    ...mapMutations(['incrementUserScore']),
   },
 };
 </script>

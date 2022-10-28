@@ -2,21 +2,13 @@
 // @ts-nocheck
 import Unicon from 'vue-unicons';
 import {
-  uniAngleDown,
-  uniExternalLinkAlt,
   uniTimes,
   uniArrowDown,
-  uniLinkBroken,
-  uniLocationPoint,
-  uniInfoCircle,
+  uniTrees,
 } from 'vue-unicons/dist/icons';
 
 Unicon.add([
-  uniAngleDown,
-  uniExternalLinkAlt,
   uniTimes,
   uniArrowDown,
-  uniLinkBroken,
-  uniLocationPoint,
-  uniInfoCircle,
+  uniTrees,
 ]);
