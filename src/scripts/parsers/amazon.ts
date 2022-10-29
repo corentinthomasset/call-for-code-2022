@@ -59,7 +59,6 @@ export default function parseProduct(pageUrl: Location, callback: (product: Prod
     const src: string | null = elGridImgs[0].getAttribute('src');
     if (src) {
       product.coverImage = new URL(src);
-      console.log(product);
     }
     callback(product);
   }
