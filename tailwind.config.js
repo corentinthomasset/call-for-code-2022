@@ -23,6 +23,9 @@ module.exports = {
       zIndex: {
         max: '9999999999',
       },
+      fontFamily: {
+        'grand-hotel': ['"Grand Hotel"', 'cursive'],
+      },
     },
   },
   variants: {

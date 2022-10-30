@@ -5,10 +5,12 @@ import {
   uniTimes,
   uniArrowDown,
   uniTrees,
+  uniAngleRight,
 } from 'vue-unicons/dist/icons';
 
 Unicon.add([
   uniTimes,
   uniArrowDown,
   uniTrees,
+  uniAngleRight,
 ]);

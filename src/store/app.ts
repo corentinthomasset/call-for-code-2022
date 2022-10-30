@@ -8,7 +8,7 @@ export default createStore({
     matches: [],
     suggestions: [],
     history: [],
-    tabId: null,
+    tabId: 0,
     userScore: 1,
   },
   getters: {
