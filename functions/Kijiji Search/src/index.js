@@ -17,7 +17,8 @@ function main(args) {
         presence: { allowEmpty: false },
       },
     };
-    const validationErrors = validate(args, constraints, { format: 'flat' });
+    const jsonArgs = JSON.parse(decodeURIComponent(args.payload));
+    const validationErrors = validate(jsonArgs, constraints, { format: 'flat' });
     if (validationErrors) {
       const err = `Payload is invalid: ${validationErrors.join(', ')}`;
       console.log(err);
@@ -25,7 +26,7 @@ function main(args) {
     }
 
     const params = {
-      q: args.query,
+      q: jsonArgs.query,
       locationId: kijiji.locations.QUEBEC.GREATER_MONTREAL,
       adType: 'OFFERED',
     };
