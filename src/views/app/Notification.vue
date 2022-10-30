@@ -11,7 +11,7 @@
         <span>
            Save <!-- up to <em class="tw-underline tw-not-italic"> ${{ maxSavings }} </em> -->
           on {{ productName }}.
-          Check offers near by!
+          Check offers nearby!
         </span>
         <button class="tw-flex tw-items-center tw-pl-2"
                 @click.stop="showNotification=false">
