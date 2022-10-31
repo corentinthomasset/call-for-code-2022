@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "build": "npx webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,7 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "kijiji-scraper": "^6.3.0",
-    "node-appwrite": "^8.1.0",
     "validate.js": "^0.13.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }
