@@ -79,4 +79,4 @@ chrome.webNavigation.onHistoryStateUpdated.addListener((details) => {
   }
 });
 
-chrome.storage.local.clear();
+// chrome.storage.local.clear();
