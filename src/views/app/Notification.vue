@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     clickHandler() {
-      this.$router.push('/results');
+      this.$router.push('/modal/results');
     },
   },
 };

@@ -1,5 +1,6 @@
 import { createRouter, createMemoryHistory, RouteRecordRaw } from 'vue-router';
 import Notification from '@/views/app/Notification.vue';
+import Modal from '@/views/app/Modal.vue';
 import Results from '@/views/app/Results.vue';
 
 const routes: Array<RouteRecordRaw> = [
@@ -9,9 +10,17 @@ const routes: Array<RouteRecordRaw> = [
     component: Notification,
   },
   {
-    path: '/results',
-    name: 'results',
-    component: Results,
+    path: '/modal',
+    name: 'modal',
+    component: Modal,
+    children: [
+      {
+        path: '',
+        alias: 'results',
+        name: 'search-results',
+        component: Results,
+      },
+    ],
   },
 ];
 
