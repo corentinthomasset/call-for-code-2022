@@ -10,12 +10,13 @@
   </div>
   <div class="tw-flex tw-justify-between tw-mt-4">
     <div class="tw-flex-auto tw-w-3/5 tw-mr-2">
-      <h1 class="tw-text-base tw-font-semibold tw-truncate group-hover:tw-underline">
+      <h1 class="tw-text-base tw-font-semibold tw-truncate group-hover:tw-underline
+      tw-text-slate-800">
         {{ title }}
       </h1>
       <h2 class="tw-font-light tw-text-sm tw-text-slate-500 tw-truncate">{{location}}</h2>
     </div>
-    <h1 class="tw-text-base tw-flex-none tw-font-semibold">
+    <h1 class="tw-text-base tw-flex-none tw-font-semibold tw-text-slate-800">
       ${{ price }}
     </h1>
   </div>

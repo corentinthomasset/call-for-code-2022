@@ -5,11 +5,11 @@
              {'tw-items-start tw-overflow-auto': expandedView}
            ]">
     <div>
-      <div class="tw-sticky tw-top-0 tw-z-10 tw-bg-gray-50">
+      <div class="tw-sticky tw-top-0 tw-z-10 tw-bg-gray-50 tw-font-noto-sans">
         <h1 class="tw-text-3xl tw-text-slate-800 tw-text-center tw-font-black">
           Pre-loved {{ search.product.name }},
         </h1>
-        <h2 class="tw-text-xl tw-text-slate-500 tw-text-center tw-pb-6 tw-mb-6 tw-font-light">
+        <h2 class="tw-text-xl tw-text-slate-500 tw-text-center tw-pb-6 tw-mb-8 tw-font-light">
           looking for new owners
         </h2>
       </div>
