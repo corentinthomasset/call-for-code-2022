@@ -1,7 +1,7 @@
 <template>
   <div class="tw-overflow-y-auto">
   <div class="tw-w-4/5 tw-max-w-[900px] tw-m-auto tw-p-10">
-    <div class="tw-w-1/2 tw-mx-auto tw-mb-12">
+    <div class="tw-w-3/4 tw-mx-auto tw-mb-12">
       <VirtualGarden/>
       <div class="tw-text-slate-400 tw-text-center">
         Virtual garden: {{userScore}} {{userScore > 1 ? 'seeds' : 'seed'}}
