@@ -52,8 +52,8 @@
     </div>
   </div>
   <div class="tw-flex tw-justify-center" v-if="expandedView">
-    <router-link to="" class="tw-flex tw-justify-between tw-items-center tw-bg-green-100 tw-px-4
-         tw-py-3 tw-cursor-pointer tw-rounded-full hover:tw-no-underline">
+    <router-link to="/modal/about" class="tw-flex tw-justify-between tw-items-center
+    tw-bg-green-100 tw-px-4 tw-py-3 tw-cursor-pointer tw-rounded-full hover:tw-no-underline">
       <unicon name="trees" class="tw-fill-green-500 tw-mr-2"/>
       <span class="tw-text-green-500">
             Buying local pre-loved items helps preserving our environment.
@@ -70,10 +70,8 @@ import ResultCard from '@/components/app/ResultCard.vue';
 export default {
   name: 'ResultsView',
   components: { ResultCard },
-  data() {
-    return {
-      expandedView: false,
-    };
+  props: {
+    expandedView: Boolean,
   },
   computed: {
     ...mapState(['search', 'matches', 'suggestions', 'userScore']),
@@ -83,7 +81,6 @@ export default {
   },
   methods: {
     expandView() {
-      this.expandedView = true;
       this.$emit('expand');
     },
   },

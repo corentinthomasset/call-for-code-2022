@@ -9,8 +9,8 @@
            {'tw-w-full tw-h-full tw-max-h-screen': expandedView}
          ]">
       <div class="tw-flex tw-justify-between">
-        <router-link to="" class="tw-flex tw-justify-between tw-items-center tw-bg-green-100 tw-px-4
-         tw-py-3 tw-cursor-pointer tw-rounded-full hover:tw-no-underline">
+        <router-link to="/modal/about" class="tw-flex tw-justify-between tw-items-center
+        tw-bg-green-100 tw-px-4 tw-py-3 tw-cursor-pointer tw-rounded-full hover:tw-no-underline">
           <SVGLeaf class="tw-fill-green-500 tw-mr-2"/>
           <span class="tw-text-green-500">{{userScore}} {{userScore > 1 ? 'seeds' : 'seed'}}</span>
         </router-link>
@@ -18,7 +18,7 @@
           <unicon name="times" class="tw-fill-slate-500"/>
         </router-link>
       </div>
-      <router-view @expand="expandView"/>
+      <router-view @expand="expandView" :expandedView="expandedView"/>
     </div>
   </div>
 </template>

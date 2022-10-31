@@ -2,6 +2,7 @@ import { createRouter, createMemoryHistory, RouteRecordRaw } from 'vue-router';
 import Notification from '@/views/app/Notification.vue';
 import Modal from '@/views/app/Modal.vue';
 import Results from '@/views/app/Results.vue';
+import About from '@/views/app/About.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -19,6 +20,11 @@ const routes: Array<RouteRecordRaw> = [
         alias: 'results',
         name: 'search-results',
         component: Results,
+      },
+      {
+        path: 'about',
+        name: 'about',
+        component: About,
       },
     ],
   },

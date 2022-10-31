@@ -6,6 +6,9 @@ import {
   uniArrowDown,
   uniTrees,
   uniAngleRight,
+  uniTruck,
+  uniTrashAlt,
+  uniBoltAlt,
 } from 'vue-unicons/dist/icons';
 
 Unicon.add([
@@ -13,4 +16,7 @@ Unicon.add([
   uniArrowDown,
   uniTrees,
   uniAngleRight,
+  uniTruck,
+  uniTrashAlt,
+  uniBoltAlt,
 ]);
