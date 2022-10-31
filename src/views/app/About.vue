@@ -90,6 +90,7 @@ export default {
   computed: {
     ...mapState(['userScore']),
   },
+  emits: ['expand'],
   mounted() {
     this.$emit('expand');
   },

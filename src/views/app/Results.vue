@@ -73,6 +73,7 @@ export default {
   props: {
     expandedView: Boolean,
   },
+  emits: ['expand'],
   computed: {
     ...mapState(['search', 'matches', 'suggestions', 'userScore']),
     topMatches() {
