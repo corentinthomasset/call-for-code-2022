@@ -19,7 +19,8 @@
         You also make your shopping more sustainable.</p>
       <ul class="tw-flex tw-justify-between tw-items-start tw-my-12">
         <li class="tw-flex tw-items-center tw-justify-center tw-flex-col tw-m-4 tw-p-4
-        tw-w-1/3 tw-bg-white tw-rounded-lg tw-shadow-lg tw-text-sm tw-text-center">
+        tw-w-1/3 tw-bg-white tw-rounded-lg tw-shadow-lg tw-text-sm tw-text-center
+        tw-animate-slide-in-bottom">
           <div class="tw-w-16 tw-h-16 tw-rounded-full tw-bg-green-200 tw-flex tw-items-center
           tw-justify-center">
             <unicon name="bolt-alt" class="tw-fill-green-500"/>
@@ -32,7 +33,8 @@
           by manufacturing new products.
         </li>
         <li class="tw-flex tw-items-center tw-justify-center tw-flex-col tw-m-4 tw-p-4
-        tw-w-1/3 tw-bg-white tw-rounded-lg tw-shadow-lg tw-text-sm tw-text-center">
+        tw-w-1/3 tw-bg-white tw-rounded-lg tw-shadow-lg tw-text-sm tw-text-center
+        tw-animate-slide-in-bottom" style="animation-delay: 100ms">
           <div class="tw-w-16 tw-h-16 tw-rounded-full tw-bg-green-200 tw-flex tw-items-center
           tw-justify-center">
             <unicon name="trash-alt" class="tw-fill-green-500"/>
@@ -48,7 +50,8 @@
             or not packaged at all, which eliminates packaging waste.</p>
         </li>
         <li class="tw-flex tw-items-center tw-justify-center tw-flex-col tw-m-4 tw-p-4
-        tw-w-1/3 tw-bg-white tw-rounded-lg tw-shadow-lg tw-text-sm tw-text-center">
+        tw-w-1/3 tw-bg-white tw-rounded-lg tw-shadow-lg tw-text-sm tw-text-center
+        tw-animate-slide-in-bottom" style="animation-delay: 200ms">
           <div class="tw-w-16 tw-h-16 tw-rounded-full tw-bg-green-200 tw-flex tw-items-center
           tw-justify-center">
             <unicon name="truck" class="tw-fill-green-500"/>

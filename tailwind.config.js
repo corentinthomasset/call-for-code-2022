@@ -11,6 +11,10 @@ module.exports = {
           '0%': { opacity: 0, transform: 'translateY(-50px) scale(.9)' },
           '100%': { opacity: 1, transform: 'translateY(0px)  scale(1)' },
         },
+        'slide-in-bottom': {
+          '0%': { opacity: 0, transform: 'translateY(50px)' },
+          '100%': { opacity: 1, transform: 'translateY(0px)' },
+        },
         'fade-in': {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
@@ -18,6 +22,7 @@ module.exports = {
       },
       animation: {
         'slide-in': 'slide-in .3s forwards ease-out',
+        'slide-in-bottom': 'slide-in-bottom .3s both ease-out',
         'fade-in': 'fade-in .3s forwards ease-out',
       },
       zIndex: {
