@@ -30,6 +30,7 @@ module.exports = {
       },
       fontFamily: {
         'grand-hotel': ['"Grand Hotel"', 'cursive'],
+        'noto-sans': ['"Noto Sans"', 'sans-serif'],
       },
     },
   },
