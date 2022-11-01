@@ -4,23 +4,23 @@ The online shopping experience makes it easy to buy new products, ignoring pre-l
 
 Nearbuy’s Chrome extension suggests alternative pre-loved products that are available nearby. It was designed to simplify the pre-loved buying experience and integrate ecological thinking into people’s online shopping process. It aims to increase products’ life, reduce packaging and lessen the environmental impacts of shipping. Our shopping assistant integrates seamlessly into the online shopping experience. 
 
+## Supplementing online shopping with local pre-loved alternatives
 ![extension](/images/extension.png)
 
 ## Contents
-- [Architecture](#architecture)
+- [Video](#video)
 - [Description](#description)
+- [Getting Started](#getting-started)
+- [Architecture](#architecture)
+- [Technology used](#technology-used)
 - [Current Limitations](#current-limitations)
 - [Roadmap](#roadmap)
-- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [Authors](#authors)
+- [License](#license)
+- [Acknoledgments](#acknowledgments)
 
-## Architecture
-
-![architecture](/images/architecture.png)
-
-1. The user navigates to a supported shopping site
-1. Request is sent to search local marketplaces 
-1. Kijiji search cloud function scrapes Kijiji website for results
-1. Local marketplaces returns the products matching the search
+## Video
 
 ## Description
 
@@ -37,6 +37,39 @@ The purpose of the extension is not to force users to buy reused products. Some 
 While there are existing applications and websites that sell reused goods, Nearbuy’s integration within the shopping platforms that sell new products would increase people’s awareness of pre-loved alternatives. It facilitates the search process and eases the buying experience for consumers. While companies can sponsor their new products with ads to increase their sales, the same isn’t done with reused goods. The Nearbuy extension fills the gap by giving visibility to local opportunities at lower prices.
 
 Nearbuy simplifies the pre-loved buying experience and opens consumers’ minds to local alternatives. Shopping reused products shouldn’t be complicated. Adopt the Nearbuy reflex!
+
+## Getting started
+To run the project locally, follow these instructions:
+
+### Pre-requisites
+
+1. [Install Node and NPM](https://nodejs.org/en/download/)
+2. Clone this repo
+
+### Build the Extension
+
+- Start a terminal in call-for-code-2020 directory.
+- Execute command `npm install`.
+- Execute `npm run build`.
+
+### Run the Extension
+
+- Go to `chrome://extensions/` and activate the `developer mode`
+- Click on `Load unpacked` and provide the path of the `call-for-code-2020/dist` folder
+- Go to a supported shopping site and browse for a product (for example: [Airpods on Amazon](https://www.amazon.ca/Apple-AirPods-Pro-2nd-Generation/dp/B0BDHWDR12?ref_=ast_sto_dp&th=1&psc=1), [Armchair on Ikea](https://www.ikea.com/ca/en/p/poaeng-armchair-birch-veneer-knisa-light-beige-s49306570/) or [Dining table on Structube](https://www.structube.com/en_ca/dina-extendable-acacia-wood-dining-table-180-cm-to-260-cm-22-43-03?pid=22888))
+
+## Architecture
+
+![architecture](/images/architecture.png)
+
+1. The user navigates to a supported shopping site
+1. Request is sent to search local marketplaces 
+1. Kijiji search cloud function scrapes Kijiji website for results
+1. Local marketplaces returns the products matching the search
+
+## Technology used
+
+- [IBM Cloud Functions](https://cloud.ibm.com/functions/)
 
 ## Current Limitations
 
@@ -56,26 +89,21 @@ Current Features:
 
 Features to Come:
 
+## Contributing
 
-## Getting started
-To run the project locally, follow these instructions:
+- Fork the repository.
+- Commit your changes to your fork.
+- Submit a pull request.
+- Handle any feedback before the request is merged.
 
-### Pre-requisites
+## Authors
 
-1. [Install Node and NPM](https://nodejs.org/en/download/)
-2. Clone this repo
+- Corentin Thomasset
+- Aida Bumbu
 
-### Build the App
+## License
 
-- Start a terminal in call-for-code-2020 directory.
-- Execute command `npm install`.
+This project is licensed under the Apache 2 License - see the [LICENSE](/LICENSE) file for details.
 
-### Run the App
+## Acknowledgments
 
-- Execute `npm run build`.
-- Go to `chrome://extensions/` and activate the `developer mode`
-- Click on `Loas unpacked` and provide the path of the `call-for-code-2020/dist` folder
-- Go to a supported shopping site and browse for a product (for example: [Airpods on Amazon](https://www.amazon.ca/Apple-AirPods-Pro-2nd-Generation/dp/B0BDHWDR12?ref_=ast_sto_dp&th=1&psc=1), [Armchair on Ikea](https://www.ikea.com/ca/en/p/poaeng-armchair-birch-veneer-knisa-light-beige-s49306570/) or [Dining table on Structube](https://www.structube.com/en_ca/dina-extendable-acacia-wood-dining-table-180-cm-to-260-cm-22-43-03?pid=22888))
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
