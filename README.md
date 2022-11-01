@@ -21,6 +21,7 @@ Nearbuy’s Chrome extension suggests alternative pre-loved products that are av
 
 ## Video
 
+[![image](https://user-images.githubusercontent.com/33403840/199153708-5cc09519-0308-4a68-a986-08130e49b842.png)](https://drive.google.com/file/d/1JGVLE2wZXVQcYF6IdKs-O3YrKJbdwAnu/view?usp=sharing)
 
 
 ## Description
