@@ -55,6 +55,7 @@ Nearbuy simplifies the pre-loved buying experience and opens consumers’ minds 
 ## Technology used
 
 - [IBM Cloud Functions](https://cloud.ibm.com/functions/)
+- [Vue.js](https://vuejs.org/)
 
 ## Current Limitations
 
