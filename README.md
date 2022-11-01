@@ -9,7 +9,9 @@ Nearbuy’s Chrome extension suggests alternative pre-loved products that are av
 ## Contents
 - [Architecture](#architecture)
 - [Description](#description)
+- [Current Limitations](#current-limitations)
 - [Roadmap](#roadmap)
+- [Getting Started](#getting-started)
 
 ## Architecture
 
