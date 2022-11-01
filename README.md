@@ -65,15 +65,8 @@ Our solution has certain limitations at the moment:
 
 ## Roadmap
 
-Current Features:
-- Integration with Ikea, Amazon and Structube
-- Search products on Facebook Marketplace and Kijiji
-- Kijiji search as serverless function on IBM Cloud Functions
-- History of searches and alternatives
-- Educational section
-- Gamifying process using seeds
+![roadmap](https://user-images.githubusercontent.com/33403840/199166388-d574c02b-843c-4d3c-8b7d-ce58ab4e9517.png)
 
-Features to Come:
 
 ## Try it Yourself
 To run the project locally, you can either use the pre-built package or build from the source.
