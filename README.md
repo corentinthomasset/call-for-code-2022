@@ -1,26 +1,27 @@
 # ![Nearbuy](/images/nearbuy.png)
 
-The online shopping experience makes it easy to buy new products, ignoring pre-loved alternatives. Consumers may be unaware of second-hand products available nearby and don’t have the reflex to look for them. Buying reused goods is the exception; we want to make it the norm by bringing local pre-loved alternatives to your online shopping with Nearbuy.
-
-Nearbuy’s Chrome extension suggests alternative pre-loved products that are available nearby. It was designed to simplify the pre-loved buying experience and integrate ecological thinking into people’s online shopping process. It aims to increase products’ life, reduce packaging and lessen the environmental impacts of shipping. Our shopping assistant integrates seamlessly into the online shopping experience. 
-
-## Supplementing online shopping with local pre-loved alternatives
-![extension](/images/extension.png)
-
 ## Contents
+- [Abstract](#Abstract]
 - [Video](#video)
 - [Description](#description)
-- [Getting Started](#getting-started)
 - [Architecture](#architecture)
 - [Technology used](#technology-used)
 - [Current Limitations](#current-limitations)
 - [Roadmap](#roadmap)
+- [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Authors](#authors)
 - [License](#license)
 - [Acknoledgments](#acknowledgments)
 
+## Abstract
+The online shopping experience makes it easy to buy new products, ignoring pre-loved alternatives. Consumers may be unaware of second-hand products available nearby and don’t have the reflex to look for them. Buying reused goods is the exception; we want to make it the norm by bringing local pre-loved alternatives to your online shopping with Nearbuy.
+
+Nearbuy’s Chrome extension suggests alternative pre-loved products that are available nearby. It was designed to simplify the pre-loved buying experience and integrate ecological thinking into people’s online shopping process. It aims to increase products’ life, reduce packaging and lessen the environmental impacts of shipping. Our shopping assistant integrates seamlessly into the online shopping experience. 
+
 ## Video
+
+
 
 ## Description
 
@@ -38,25 +39,8 @@ While there are existing applications and websites that sell reused goods, Nearb
 
 Nearbuy simplifies the pre-loved buying experience and opens consumers’ minds to local alternatives. Shopping reused products shouldn’t be complicated. Adopt the Nearbuy reflex!
 
-## Getting started
-To run the project locally, follow these instructions:
+![extension](/images/extension.png)
 
-### Pre-requisites
-
-1. [Install Node and NPM](https://nodejs.org/en/download/)
-2. Clone this repo
-
-### Build the Extension
-
-- Start a terminal in call-for-code-2020 directory.
-- Execute command `npm install`.
-- Execute `npm run build`.
-
-### Run the Extension
-
-- Go to `chrome://extensions/` and activate the `developer mode`
-- Click on `Load unpacked` and provide the path of the `call-for-code-2020/dist` folder
-- Go to a supported shopping site and browse for a product (for example: [Airpods on Amazon](https://www.amazon.ca/Apple-AirPods-Pro-2nd-Generation/dp/B0BDHWDR12?ref_=ast_sto_dp&th=1&psc=1), [Armchair on Ikea](https://www.ikea.com/ca/en/p/poaeng-armchair-birch-veneer-knisa-light-beige-s49306570/) or [Dining table on Structube](https://www.structube.com/en_ca/dina-extendable-acacia-wood-dining-table-180-cm-to-260-cm-22-43-03?pid=22888))
 
 ## Architecture
 
@@ -88,6 +72,26 @@ Current Features:
 - Gamifying process using seeds
 
 Features to Come:
+
+## Getting started
+To run the project locally, follow these instructions:
+
+### Pre-requisites
+
+1. [Install Node and NPM](https://nodejs.org/en/download/)
+2. Clone this repo
+
+### Build the Extension
+
+- Start a terminal in call-for-code-2020 directory.
+- Execute command `npm install`.
+- Execute `npm run build`.
+
+### Run the Extension
+
+- Go to `chrome://extensions/` and activate the `developer mode`
+- Click on `Load unpacked` and provide the path of the `call-for-code-2020/dist` folder
+- Go to a supported shopping site and browse for a product (for example: [Airpods on Amazon](https://www.amazon.ca/Apple-AirPods-Pro-2nd-Generation/dp/B0BDHWDR12?ref_=ast_sto_dp&th=1&psc=1), [Armchair on Ikea](https://www.ikea.com/ca/en/p/poaeng-armchair-birch-veneer-knisa-light-beige-s49306570/) or [Dining table on Structube](https://www.structube.com/en_ca/dina-extendable-acacia-wood-dining-table-180-cm-to-260-cm-22-43-03?pid=22888))
 
 ## Contributing
 
