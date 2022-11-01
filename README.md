@@ -108,8 +108,11 @@ To run the project locally, you can either use the pre-built package or build fr
 
 ## Authors
 
-- Corentin Thomasset
-- Aida Bumbu
+<a href="https://github.com/corentinthomasset/call-for-code-2022/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=corentinthomasset/call-for-code-2022"/>
+</a>
+
+Corentin Thomasset and Aida Bumbu
 
 ## License
 
