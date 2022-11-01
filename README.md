@@ -59,7 +59,7 @@ Nearbuy simplifies the pre-loved buying experience and opens consumers’ minds 
 ## Current Limitations
 
 Our solution has certain limitations at the moment:
-- If no results from Facebook marketplace are shown, user must login to their Facebook account.
+- If users don't receive any alternatives from Facebook marketplace, they should login to their Facebook account.
 - Only Montreal, Canada location is supported ATM.
 
 ## Roadmap
