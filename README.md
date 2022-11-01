@@ -74,24 +74,29 @@ Current Features:
 
 Features to Come:
 
-## Getting started
-To run the project locally, follow these instructions:
+## Try it Yourself
+To run the project locally, you can either use the pre-built package or build from the source.
 
-### Pre-requisites
+![install-extension](/images/install-extension.png)
 
+### Use pre-built Package
+1. Git clone the repo
+1. Go to `chrome://extensions/` and activate the `developer mode`
+1. Click on `Pack extension` and provide the path of the `call-for-code-2020/extension.` folder
+1. [Test the Extension](#test-the-extension)
+
+### Build from the Source
 1. [Install Node and NPM](https://nodejs.org/en/download/)
-2. Clone this repo
+1. Clone this repo
+1. Start a terminal in call-for-code-2020 directory.
+1. Execute command `npm install`.
+1. Execute `npm run build`.
+1. Go to `chrome://extensions/` and activate the `developer mode`
+1. Click on `Load unpacked` and provide the path of the `call-for-code-2020/dist` folder
+1. [Test the Extension](#test-the-extension)
 
-### Build the Extension
+### Test the Extension
 
-- Start a terminal in call-for-code-2020 directory.
-- Execute command `npm install`.
-- Execute `npm run build`.
-
-### Run the Extension
-
-- Go to `chrome://extensions/` and activate the `developer mode`
-- Click on `Load unpacked` and provide the path of the `call-for-code-2020/dist` folder
 - Go to a supported shopping site and browse for a product (for example: [Airpods on Amazon](https://www.amazon.ca/Apple-AirPods-Pro-2nd-Generation/dp/B0BDHWDR12?ref_=ast_sto_dp&th=1&psc=1), [Armchair on Ikea](https://www.ikea.com/ca/en/p/poaeng-armchair-birch-veneer-knisa-light-beige-s49306570/) or [Dining table on Structube](https://www.structube.com/en_ca/dina-extendable-acacia-wood-dining-table-180-cm-to-260-cm-22-43-03?pid=22888))
 
 ## Contributing
