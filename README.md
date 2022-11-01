@@ -80,10 +80,11 @@ To run the project locally, you can either use the pre-built package or build fr
 ![install-extension](/images/install-extension.png)
 
 ### Use pre-built Package
-1. Git clone the repo
+1. Download the latests nearby archive from [here](https://github.com/corentinthomasset/call-for-code-2022/releases/)
+1. Unpack the archive
 1. Go to `chrome://extensions/` and activate the `developer mode`
-1. Click on `Pack extension` and provide the path of the `call-for-code-2020/extension.` folder
-1. [Test the Extension](#test-the-extension)
+1. Click on `Load unpacked` and select the `dist` folder from the archive
+1. [Enjoy!](#test-the-extension)
 
 ### Build from the Source
 1. [Install Node and NPM](https://nodejs.org/en/download/)
@@ -93,7 +94,7 @@ To run the project locally, you can either use the pre-built package or build fr
 1. Execute `npm run build`.
 1. Go to `chrome://extensions/` and activate the `developer mode`
 1. Click on `Load unpacked` and provide the path of the `call-for-code-2020/dist` folder
-1. [Test the Extension](#test-the-extension)
+1. [Enjoy!](#test-the-extension)
 
 ### Test the Extension
 
