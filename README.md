@@ -91,7 +91,7 @@ To run the project locally, you can either use the pre-built package or build fr
 1. [Install Node and NPM](https://nodejs.org/en/download/)
 1. Clone this repo
 1. Start a terminal in call-for-code-2020 directory.
-1. Create .env file with the following variable `VUE_APP_API_ENDPOINT=https://us-east.functions.appdomain.cloud/api/v1/web/43a6f985-6e18-48c7-9aae-c07643a299b0/nearbuy`
+1. Run `echo "VUE_APP_API_ENDPOINT=https://us-east.functions.appdomain.cloud/api/v1/web/43a6f985-6e18-48c7-9aae-c07643a299b0/nearbuy" > .env`
 1. Execute command `npm install`.
 1. Execute `npm run build`.
 1. Go to `chrome://extensions/` and activate the `developer mode`
