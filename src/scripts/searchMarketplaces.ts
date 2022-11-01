@@ -9,7 +9,7 @@ export default async function searchMarketplaces(product: Product): Promise<Resu
     const location = 'montreal';
     const promises: Promise<string>[] = [];
 
-    const remoteSearchFunctions = ['6354a0e6f27888512206'];
+    const remoteSearchFunctions = ['kijiji-search.json'];
     const localSearchFunctions = [facebookMarketplace];
 
     // Local search functions
@@ -18,23 +18,17 @@ export default async function searchMarketplaces(product: Product): Promise<Resu
     }
     // Remote search functions
     for (let i = 0; i < remoteSearchFunctions.length; i += 1) {
-      promises.push(
-        new Promise((res, rej) => {
-          setTimeout(() => {
-            api.provider().functions.createExecution(remoteSearchFunctions[i], JSON.stringify({
-              query,
-              location,
-            })).then((result) => res(result.response)).catch(((err) => { rej(err); }));
-          }, i * 100);
-        }),
-      );
+      promises.push(api.execute('kijiji-search.json', {
+        query,
+        location,
+      }));
     }
     Promise.allSettled(promises).then((results) => {
       const searchResults: Result[] = [];
       const errors:string[] = [];
       results.forEach((res) => {
         if (res.status === 'fulfilled') {
-          const data = JSON.parse(res.value);
+          const data = JSON.parse(res.value).results;
           // Compute result ratings using string-similarity
           for (let i = 0; i < data.length; i += 1) {
             data[i].rating = compareTwoStrings(query, data[i].title);

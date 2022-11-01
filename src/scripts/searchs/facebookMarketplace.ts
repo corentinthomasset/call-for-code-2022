@@ -75,7 +75,7 @@ export default async function search(query: string, location: string):Promise<st
           });
         }
       }
-      resolve(JSON.stringify(results));
+      resolve(JSON.stringify({ results }));
     }).catch((err) => {
       reject(new Error(`Unable to fetch results from Facebook Marketplace. Request failed with error: ${err}`));
     });
