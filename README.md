@@ -112,3 +112,10 @@ This project is licensed under the Apache 2 License - see the [LICENSE](/LICENSE
 
 ## Acknowledgments
 
+Music from Uppbeat (free for Creators!): https://uppbeat.io/t/all-good-folks/aspire
+License code: W0XRCKIFRDITNFIH
+
+Stock footages provided by Pressmaster, Patramansky Oleg, M-Stock Agency, Pressmaster and Videvo, downloaded from https://www.videvo.net
+downloaded from <a class="videvo-redirect" target="_blank" href="https://www.videvo.net">videvo.net</a>
+
+
