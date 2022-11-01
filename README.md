@@ -1,4 +1,4 @@
-# ![Nearbuy](/images/nearbuy.png)
+![logo-small](https://user-images.githubusercontent.com/33403840/199168564-6499e48a-05bd-4bac-86f4-5db0bdb677e1.png)
 
 ## Contents
 - [Abstract](#Abstract)
