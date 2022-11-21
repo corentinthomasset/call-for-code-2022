@@ -1,4 +1,4 @@
-# ![Nearbuy](/images/nearbuy.png)
+![logo-small](https://user-images.githubusercontent.com/33403840/199168564-6499e48a-05bd-4bac-86f4-5db0bdb677e1.png)
 
 ## Contents
 - [Abstract](#Abstract)
@@ -21,7 +21,7 @@ Nearbuy’s Chrome extension suggests alternative pre-loved products that are av
 
 ## Video
 
-[![image](https://user-images.githubusercontent.com/33403840/199153708-5cc09519-0308-4a68-a986-08130e49b842.png)](https://drive.google.com/file/d/1JGVLE2wZXVQcYF6IdKs-O3YrKJbdwAnu/view?usp=sharing)
+[![image](https://user-images.githubusercontent.com/33403840/199153708-5cc09519-0308-4a68-a986-08130e49b842.png)](https://drive.google.com/file/d/1X5EbiT4x0L3ypiq3ge21wCIXGKSvQJVr/view?usp=sharing)
 
 
 ## Description
@@ -55,11 +55,12 @@ Nearbuy simplifies the pre-loved buying experience and opens consumers’ minds 
 ## Technology used
 
 - [IBM Cloud Functions](https://cloud.ibm.com/functions/)
+- [Vue.js](https://vuejs.org/)
 
 ## Current Limitations
 
 Our solution has certain limitations at the moment:
-- If no results from Facebook marketplace are shown, user must login to their Facebook account.
+- If users don't receive any alternatives from Facebook marketplace, they should login to their Facebook account.
 - Only Montreal, Canada location is supported ATM.
 
 ## Roadmap
@@ -73,6 +74,8 @@ Current Features:
 - Gamifying process using seeds
 
 Features to Come:
+![roadmap](https://user-images.githubusercontent.com/33403840/199166388-d574c02b-843c-4d3c-8b7d-ce58ab4e9517.png)
+
 
 ## Try it Yourself
 To run the project locally, you can either use the pre-built package or build from the source.
@@ -80,20 +83,22 @@ To run the project locally, you can either use the pre-built package or build fr
 ![install-extension](/images/install-extension.png)
 
 ### Use pre-built Package
-1. Git clone the repo
+1. Download the latests nearby archive from [here](https://github.com/corentinthomasset/call-for-code-2022/releases/)
+1. Unpack the archive
 1. Go to `chrome://extensions/` and activate the `developer mode`
-1. Click on `Pack extension` and provide the path of the `call-for-code-2020/extension.` folder
-1. [Test the Extension](#test-the-extension)
+1. Click on `Load unpacked` and select the `dist` folder from the archive
+1. [Enjoy!](#test-the-extension)
 
 ### Build from the Source
 1. [Install Node and NPM](https://nodejs.org/en/download/)
 1. Clone this repo
 1. Start a terminal in call-for-code-2020 directory.
+1. Run `echo "VUE_APP_API_ENDPOINT=https://us-east.functions.appdomain.cloud/api/v1/web/43a6f985-6e18-48c7-9aae-c07643a299b0/nearbuy" > .env`
 1. Execute command `npm install`.
 1. Execute `npm run build`.
 1. Go to `chrome://extensions/` and activate the `developer mode`
 1. Click on `Load unpacked` and provide the path of the `call-for-code-2020/dist` folder
-1. [Test the Extension](#test-the-extension)
+1. [Enjoy!](#test-the-extension)
 
 ### Test the Extension
 
