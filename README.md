@@ -1,14 +1,14 @@
 ![logo-small](https://user-images.githubusercontent.com/33403840/199168564-6499e48a-05bd-4bac-86f4-5db0bdb677e1.png)
 
 ## Contents
-- [Abstract](#Abstract)
+- [Abstract](#abstract)
 - [Video](#video)
 - [Description](#description)
 - [Architecture](#architecture)
 - [Technology used](#technology-used)
 - [Current Limitations](#current-limitations)
 - [Roadmap](#roadmap)
-- [Getting Started](#getting-started)
+- [Try it Yourself](#try-it-yourself)
 - [Contributing](#contributing)
 - [Authors](#authors)
 - [License](#license)
@@ -21,7 +21,9 @@ Nearbuy’s Chrome extension suggests alternative pre-loved products that are av
 
 ## Video
 
-[![image](https://user-images.githubusercontent.com/33403840/199153708-5cc09519-0308-4a68-a986-08130e49b842.png)](https://drive.google.com/file/d/1X5EbiT4x0L3ypiq3ge21wCIXGKSvQJVr/view?usp=sharing)
+[![image](https://user-images.githubusercontent.com/33403840/199153708-5cc09519-0308-4a68-a986-08130e49b842.png)](https://www.youtube.com/watch?v=fa7A41oZJPw)
+
+[Download Video HD](https://drive.google.com/file/d/1X5EbiT4x0L3ypiq3ge21wCIXGKSvQJVr/view?usp=sharing)
 
 
 ## Description
