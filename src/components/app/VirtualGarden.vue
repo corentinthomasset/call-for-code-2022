@@ -1,5 +1,6 @@
 <template>
-  <div class="tw-w-3/4 tw-mx-auto tw-mb-12 tw-relative tw-pt-[95px] tw-w-[480px]">
+  <div class="tw-w-3/4 tw-mx-auto tw-mb-12 tw-relative tw-pt-[95px] tw-w-[480px]
+  tw-pointer-events-none tw-select-none">
     <GardenImg class="tw-w-full"/>
     <TreeImg v-for="index in parseInt(treeCount)" :key="index" class="tw-absolute tw-w-20"
              :style="treeStyle()"/>
